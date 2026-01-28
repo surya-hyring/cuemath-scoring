@@ -44,14 +44,21 @@ export function KanbanBoard() {
 return (
   <div className="min-h-screen bg-background flex flex-col">
    
-
+ <header className="border-b border-border bg-card px-6 py-4">
+      <h1 className="text-xl font-semibold text-foreground">
+        Candidate Evaluation Comparison
+      </h1>
+      <p className="text-sm text-muted-foreground mt-1">
+        Previous vs Trained AI model-based evaluations • Ranked independently per source
+      </p>
+    </header>
 
 
     {/* Kanban Board */}
     <div className="flex-1 overflow-y-auto p-6">
       <div className="flex flex-wrap gap-4">
         <KanbanColumn
-          title="Client Evaluation"
+          title="previous Evaluations"
           columnType="client"
           candidates={clientData}
           showRank={false}
