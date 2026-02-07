@@ -1,5 +1,5 @@
-import { KanbanBoard } from "@/components/KanbanBoard";
+import CompareComponent from "@/components/comparision.component";
 
 export default function Page() {
-return <KanbanBoard />;
+return <CompareComponent />;
 }
