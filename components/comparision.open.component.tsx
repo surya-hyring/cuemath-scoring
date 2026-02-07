@@ -1,28 +1,37 @@
-"use client";
+"use client"
 
-import { useMemo, useState } from "react";
-import { OPEN_AI_DATA } from "@/data/openai";
-import { Card, CardHeader, CardContent } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import { Input } from "@/components/ui/input";
+import { useMemo, useState } from "react"
+import { OPEN_AI_DATA } from "@/data/openai"
+import { Card, CardHeader, CardContent } from "@/components/ui/card"
+import { Progress } from "@/components/ui/progress"
+import { Input } from "@/components/ui/input"
 
 /* -------------------- helpers -------------------- */
 
 const getEnglishGrade = (score: number) => {
-  if (score <= 40) return "A1";
-  if (score <= 55) return "A2";
-  if (score <= 65) return "B1";
-  if (score <= 75) return "B2";
-  if (score <= 90) return "C1";
-  return "C2";
-};
+  if (score <= 40) return "A1"
+  if (score <= 55) return "A2"
+  if (score <= 65) return "B1"
+  if (score <= 75) return "B2"
+  if (score <= 90) return "C1"
+  return "C2"
+}
+
+const gradeColorMap: Record<string, string> = {
+  A1: "bg-red-100 text-red-700",
+  A2: "bg-orange-100 text-orange-700",
+  B1: "bg-yellow-100 text-yellow-800",
+  B2: "bg-lime-100 text-lime-800",
+  C1: "bg-green-100 text-green-700",
+  C2: "bg-emerald-100 text-emerald-800",
+}
 
 const ScoreRow = ({
   label,
   value,
 }: {
-  label: string;
-  value: number;
+  label: string
+  value: number
 }) => {
   return (
     <div className="space-y-1">
@@ -34,23 +43,25 @@ const ScoreRow = ({
       </div>
       <Progress value={value} className="h-2" />
     </div>
-  );
-};
+  )
+}
 
 /* -------------------- component -------------------- */
 
 export const CompareOPENAIComponent = () => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("")
 
   const filteredAndSortedData = useMemo(() => {
-    return OPEN_AI_DATA.filter((item) =>
-      item.candidate_name.toLowerCase().includes(search.toLowerCase()),
-    ).sort(
-      (a, b) =>
-        b.evaluation.data.overall_score -
-        a.evaluation.data.overall_score,
-    );
-  }, [search]);
+    return OPEN_AI_DATA
+      .filter((item) =>
+        item.candidate_name.toLowerCase().includes(search.toLowerCase())
+      )
+      .sort(
+        (a, b) =>
+          b.evaluation.data.overall_score -
+          a.evaluation.data.overall_score
+      )
+  }, [search])
 
   return (
     <div className="space-y-4 p-4 max-w-xl">
@@ -62,8 +73,8 @@ export const CompareOPENAIComponent = () => {
 
       <div className="grid gap-4">
         {filteredAndSortedData.map((each, index) => {
-          const data = each.evaluation.data;
-          const grade = getEnglishGrade(data.overall_score);
+          const data = each.evaluation.data
+          const grade = getEnglishGrade(data.overall_score)
 
           return (
             <Card key={each.candidate_id}>
@@ -72,13 +83,15 @@ export const CompareOPENAIComponent = () => {
                 <div className="flex items-start justify-between">
                   <div className="space-y-1">
                     <div className="flex items-center gap-3">
-                      {/* English Level */}
-                      <span className="text-3xl font-bold tracking-tight">
+                      {/* CEFR Grade */}
+                      <span
+                        className={`rounded-md px-2 py-1 text-sm font-bold ${gradeColorMap[grade]}`}
+                      >
                         {grade}
                       </span>
 
                       {/* Rank */}
-                      <span className="text-sm text-muted-foreground">
+                      <span className="text-xs text-muted-foreground">
                         Rank #{index + 1}
                       </span>
                     </div>
@@ -105,26 +118,11 @@ export const CompareOPENAIComponent = () => {
               <CardContent className="space-y-5">
                 {/* Scores */}
                 <div className="grid gap-3">
-                  <ScoreRow
-                    label="Fluency"
-                    value={data.fluency_score}
-                  />
-                  <ScoreRow
-                    label="Pronunciation"
-                    value={data.pronunciation_score}
-                  />
-                  <ScoreRow
-                    label="Vocabulary"
-                    value={data.vocabulary_score}
-                  />
-                  <ScoreRow
-                    label="Grammar"
-                    value={data.grammar_score}
-                  />
-                  <ScoreRow
-                    label="Filler Words"
-                    value={data.filler_words_score}
-                  />
+                  <ScoreRow label="Fluency" value={data.fluency_score} />
+                  <ScoreRow label="Pronunciation" value={data.pronunciation_score} />
+                  <ScoreRow label="Vocabulary" value={data.vocabulary_score} />
+                  <ScoreRow label="Grammar" value={data.grammar_score} />
+                  <ScoreRow label="Filler Words" value={data.filler_words_score} />
                   <ScoreRow
                     label="Mother Tongue Influence"
                     value={data.mother_tongue_influence_score}
@@ -142,9 +140,9 @@ export const CompareOPENAIComponent = () => {
                 </div>
               </CardContent>
             </Card>
-          );
+          )
         })}
       </div>
     </div>
-  );
-};
+  )
+}

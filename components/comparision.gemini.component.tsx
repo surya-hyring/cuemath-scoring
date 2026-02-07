@@ -17,6 +17,15 @@ const getEnglishGrade = (score: number) => {
   return "C2"
 }
 
+const gradeColorMap: Record<string, string> = {
+  A1: "bg-red-100 text-red-700",
+  A2: "bg-orange-100 text-orange-700",
+  B1: "bg-yellow-100 text-yellow-800",
+  B2: "bg-lime-100 text-lime-800",
+  C1: "bg-green-100 text-green-700",
+  C2: "bg-emerald-100 text-emerald-800",
+}
+
 const ScoreRow = ({
   label,
   value,
@@ -69,13 +78,15 @@ export const CompareGeminiData = () => {
                 <div className="flex items-start justify-between">
                   <div className="space-y-1">
                     <div className="flex items-center gap-3">
-                      {/* English Level */}
-                      <span className="text-3xl font-bold tracking-tight">
+                      {/* CEFR Grade */}
+                      <span
+                        className={`rounded-md px-2 py-1 text-sm font-bold ${gradeColorMap[grade]}`}
+                      >
                         {grade}
                       </span>
 
                       {/* Rank */}
-                      <span className="text-sm text-muted-foreground">
+                      <span className="text-xs text-muted-foreground">
                         Rank #{index + 1}
                       </span>
                     </div>
@@ -102,26 +113,11 @@ export const CompareGeminiData = () => {
               <CardContent className="space-y-5">
                 {/* Scores */}
                 <div className="grid gap-3">
-                  <ScoreRow
-                    label="Fluency"
-                    value={each.fluency_score}
-                  />
-                  <ScoreRow
-                    label="Pronunciation"
-                    value={each.pronunciation_score}
-                  />
-                  <ScoreRow
-                    label="Vocabulary"
-                    value={each.vocabulary_score}
-                  />
-                  <ScoreRow
-                    label="Grammar"
-                    value={each.grammar_score}
-                  />
-                  <ScoreRow
-                    label="Filler Words"
-                    value={each.filler_words_score}
-                  />
+                  <ScoreRow label="Fluency" value={each.fluency_score} />
+                  <ScoreRow label="Pronunciation" value={each.pronunciation_score} />
+                  <ScoreRow label="Vocabulary" value={each.vocabulary_score} />
+                  <ScoreRow label="Grammar" value={each.grammar_score} />
+                  <ScoreRow label="Filler Words" value={each.filler_words_score} />
                   <ScoreRow
                     label="Mother Tongue Influence"
                     value={each.mother_tongue_influence_score}
