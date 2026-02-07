@@ -16,7 +16,7 @@ const CompareComponent = () => {
       
       <Card className="flex flex-col">
         <CardHeader>
-          <CardTitle>OpenAI</CardTitle>
+          <CardTitle>MODEL A</CardTitle>
         </CardHeader>
         <CardContent className="flex-1 overflow-y-auto p-0">
           <CompareOPENAIComponent />
@@ -25,7 +25,7 @@ const CompareComponent = () => {
 
       <Card className="flex flex-col">
         <CardHeader>
-          <CardTitle>Claude</CardTitle>
+          <CardTitle>MODEL B</CardTitle>
         </CardHeader>
         <CardContent className="flex-1 overflow-y-auto p-0">
           <CompareClaudeComponent />
@@ -34,7 +34,7 @@ const CompareComponent = () => {
 
       <Card className="flex flex-col">
         <CardHeader>
-          <CardTitle>Gemini</CardTitle>
+          <CardTitle>MODEL C</CardTitle>
         </CardHeader>
         <CardContent className="flex-1 overflow-y-auto p-0">
           <CompareGeminiData />
