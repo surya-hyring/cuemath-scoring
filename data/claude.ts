@@ -4,15 +4,15 @@ export type OpenAICandidateEvaluation = {
   evaluation: {
     success: boolean;
     data: {
-      name: string;
-      overall_score: number;
-      pronunciation_score: number;
-      grammar_score: number;
-      vocabulary_score: number;
-      filler_words_score: number;
-      mother_tongue_influence_score: number;
-      fluency_score: number;
-      summary_points: string[];
+      name: string
+    overall_score: number
+    pronunciation_score: number
+    grammar_score: number
+    vocabulary_score: number
+    filler_words_score: number
+    mother_tongue_influence_score: number
+    fluency_score: number
+    detailed_comments: string
     };
     model: "claude" | string;
     timestamp: string;
@@ -22,1016 +22,784 @@ export type OpenAICandidateEvaluation = {
 export const CLAUDE_DATA = 
 
 [
-    {
-      "candidate_id": 14693,
-      "candidate_name": "Ajay Kumar Sharma ",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Ajay Kumar Sharma ",
-          "overall_score": 57,
-          "pronunciation_score": 72,
-          "grammar_score": 62,
-          "vocabulary_score": 65,
-          "filler_words_score": 70,
-          "mother_tongue_influence_score": 58,
-          "fluency_score": 68,
-          "summary_points": [
-            "Demonstrates strong subject matter expertise in mathematics with clear passion for teaching and helping students understand concepts",
-            "Shows good communication flow and maintains conversational pace throughout responses with adequate professional vocabulary",
-            "Provides relevant examples and practical teaching strategies that show real classroom experience",
-            "Sentence structure patterns occasionally create awkward phrasing that requires listener attention to follow meaning",
-            "Grammar consistency could be improved to enhance overall professional communication clarity"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:55:27.406Z"
-      }
-    },
-    {
-      "candidate_id": 14559,
-      "candidate_name": "AVANTIKA",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "AVANTIKA",
-          "overall_score": 59,
-          "pronunciation_score": 72,
-          "grammar_score": 62,
-          "vocabulary_score": 65,
-          "filler_words_score": 45,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 58,
-          "summary_points": [
-            "Shows genuine passion for teaching and connecting with students globally, with clear enthusiasm for making math engaging through real-life examples",
-            "Demonstrates solid understanding of mathematical concepts and practical teaching approaches, including visual aids and conceptual explanations",
-            "Communication is generally understandable with adequate vocabulary for professional teaching contexts",
-            "Speech flow is frequently interrupted by excessive filler words and incomplete thoughts that impact overall clarity",
-            "Grammar patterns and sentence structure would benefit from improvement to enhance professional communication effectiveness"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:55:56.797Z"
-      }
-    },
-    {
-      "candidate_id": 14706,
-      "candidate_name": "CHARU GOYAL",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "CHARU GOYAL",
-          "overall_score": 60,
-          "pronunciation_score": 75,
-          "grammar_score": 68,
-          "vocabulary_score": 72,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 65,
-          "fluency_score": 62,
-          "summary_points": [
-            "Demonstrates strong subject matter expertise in mathematics education with clear understanding of teaching methodologies and student engagement strategies",
-            "Shows good professional vocabulary range and ability to explain complex educational concepts with appropriate examples and real-world applications",
-            "Communication is generally understandable with adequate pronunciation for international professional settings",
-            "Speech flow is occasionally interrupted by frequent filler words and hesitations that could benefit from practice to improve confidence",
-            "Some grammatical patterns and sentence structures could be refined to enhance overall clarity in professional communication"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:56:08.412Z"
-      }
-    },
-    {
-      "candidate_id": 14687,
-      "candidate_name": "Gayathri P",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Gayathri P",
-          "overall_score": 52,
-          "pronunciation_score": 62,
-          "grammar_score": 48,
-          "vocabulary_score": 55,
-          "filler_words_score": 58,
-          "mother_tongue_influence_score": 45,
-          "fluency_score": 52,
-          "summary_points": [
-            "Shows genuine enthusiasm for teaching and demonstrates understanding of practical teaching methods like using real-life examples and hands-on activities",
-            "Has relevant teaching experience with different age groups and understands the importance of student engagement and interaction",
-            "Communication is significantly impacted by frequent grammar errors, incomplete sentences, and unclear sentence structures that make meaning difficult to follow",
-            "Would benefit from focused practice on sentence completion and organizing thoughts before speaking to improve professional communication clarity"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:56:17.909Z"
-      }
-    },
-    {
-      "candidate_id": 14547,
-      "candidate_name": "Harish HG",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Harish HG",
-          "overall_score": 58,
-          "pronunciation_score": 70,
-          "grammar_score": 62,
-          "vocabulary_score": 60,
-          "filler_words_score": 45,
-          "mother_tongue_influence_score": 55,
-          "fluency_score": 58,
-          "summary_points": [
-            "Demonstrates genuine enthusiasm for mathematics and teaching, with clear passion for working with numbers and helping students understand concepts",
-            "Shows good foundational understanding of teaching principles, including the importance of asking questions, relating concepts to daily life, and avoiding rote memorization",
-            "Communication is generally understandable despite frequent pauses and hesitations throughout responses",
-            "Heavy use of filler words and incomplete sentence structures significantly impacts the flow and clarity of explanations",
-            "Would benefit from practicing more structured responses and reducing verbal hesitations to improve professional communication effectiveness"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:56:28.510Z"
-      }
-    },
-    {
-      "candidate_id": 14712,
-      "candidate_name": "Heena Sagar Jain",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Heena Sagar Jain",
-          "overall_score": 59,
-          "pronunciation_score": 72,
-          "grammar_score": 62,
-          "vocabulary_score": 65,
-          "filler_words_score": 45,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 58,
-          "summary_points": [
-            "Shows genuine passion for teaching and strong connection with students, with five years of coding instruction experience",
-            "Demonstrates practical teaching approach using real-world examples, toys, and hands-on materials to make concepts accessible",
-            "Communicates core ideas effectively and shows understanding of student-centered learning principles",
-            "Speech flow needs improvement as frequent pauses and restarts can interrupt communication momentum",
-            "Reducing filler words and developing more structured responses would enhance professional presentation"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:56:38.550Z"
-      }
-    },
-    {
-      "candidate_id": 14617,
-      "candidate_name": "kajal bagdai",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "kajal bagdai",
-          "overall_score": 60,
-          "pronunciation_score": 75,
-          "grammar_score": 68,
-          "vocabulary_score": 70,
-          "filler_words_score": 45,
-          "mother_tongue_influence_score": 70,
-          "fluency_score": 62,
-          "summary_points": [
-            "Demonstrates solid understanding of teaching concepts and shows genuine passion for mathematics education and working with children",
-            "Communicates ideas clearly with good vocabulary range and generally understandable pronunciation for international audiences",
-            "Shows ability to explain complex teaching methodologies using practical examples and real-world applications",
-            "Speech flow is significantly impacted by excessive filler words and frequent hesitations that disrupt the natural rhythm of communication",
-            "Would benefit from practicing smoother delivery and reducing dependency on fillers to enhance professional presentation"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:56:49.295Z"
-      }
-    },
-    {
-      "candidate_id": 14597,
-      "candidate_name": "kokilapriya",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "kokilapriya",
-          "overall_score": 57,
-          "pronunciation_score": 70,
-          "grammar_score": 62,
-          "vocabulary_score": 55,
-          "filler_words_score": 45,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 58,
-          "summary_points": [
-            "Shows genuine passion for teaching and helping students understand mathematical concepts clearly",
-            "Demonstrates good awareness of effective teaching methods including visual learning, real-life examples, and breaking topics into simple steps",
-            "Communication is generally understandable with clear pronunciation for international audiences",
-            "Speech flow needs improvement as frequent pauses and fillers significantly disrupt the delivery of ideas",
-            "Would benefit from expanding vocabulary range and developing more complete sentence structures to express teaching concepts more precisely"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:56:58.311Z"
-      }
-    },
-    {
-      "candidate_id": 14555,
-      "candidate_name": "Kritika taneja",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Kritika taneja",
-          "overall_score": 59,
-          "pronunciation_score": 72,
-          "grammar_score": 62,
-          "vocabulary_score": 65,
-          "filler_words_score": 45,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 58,
-          "summary_points": [
-            "Shows genuine passion for mathematics teaching and demonstrates subject knowledge with practical teaching methods like Vedic math and step-by-step explanations",
-            "Communicates core ideas effectively and maintains professional enthusiasm throughout the conversation",
-            "Speech flow is significantly impacted by excessive filler words and frequent pauses that disrupt the natural rhythm of communication",
-            "Sentence structure often becomes fragmented or incomplete, requiring listener effort to follow the intended meaning",
-            "Would benefit from practicing smoother delivery and reducing hesitation patterns to enhance professional presentation"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:57:08.984Z"
-      }
-    },
-    {
-      "candidate_id": 14678,
-      "candidate_name": "Lakshay Dev Singh",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Lakshay Dev Singh",
-          "overall_score": 58,
-          "pronunciation_score": 75,
-          "grammar_score": 68,
-          "vocabulary_score": 70,
-          "filler_words_score": 65,
-          "mother_tongue_influence_score": 70,
-          "fluency_score": 72,
-          "summary_points": [
-            "Demonstrates solid professional communication skills with clear expression of ideas and teaching concepts",
-            "Shows good subject matter knowledge and practical teaching experience with specific examples",
-            "Maintains consistent flow throughout responses with adequate vocabulary for professional context",
-            "Grammar patterns occasionally affect sentence clarity but meaning remains understandable",
-            "Could benefit from reducing filler words and self-corrections to enhance overall fluency"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:57:17.877Z"
-      }
-    },
-    {
-      "candidate_id": 14666,
-      "candidate_name": "Mahalakshmi V",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Mahalakshmi V",
-          "overall_score": 57,
-          "pronunciation_score": 72,
-          "grammar_score": 68,
-          "vocabulary_score": 65,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 70,
-          "fluency_score": 62,
-          "summary_points": [
-            "Demonstrates genuine passion for teaching and shows good understanding of pedagogical concepts like visualization and student engagement",
-            "Communicates core ideas effectively and maintains conversational flow throughout the interview despite some hesitations",
-            "Shows ability to provide concrete examples and explain teaching methodologies with reasonable clarity",
-            "Frequent use of filler words and occasional incomplete sentences could be reduced to enhance professional presentation",
-            "Would benefit from practicing smoother transitions between ideas to improve overall fluency in professional discussions"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:57:27.973Z"
-      }
-    },
-    {
-      "candidate_id": 14676,
-      "candidate_name": "Mathi T",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Mathi T",
-          "overall_score": 60,
-          "pronunciation_score": 75,
-          "grammar_score": 72,
-          "vocabulary_score": 70,
-          "filler_words_score": 60,
-          "mother_tongue_influence_score": 68,
-          "fluency_score": 68,
-          "summary_points": [
-            "Demonstrates genuine passion for mathematics education and shows strong understanding of teaching concepts through real-world examples and student engagement strategies",
-            "Communicates ideas clearly with good pronunciation and maintains conversational flow throughout responses",
-            "Shows solid professional vocabulary range appropriate for educational contexts and explains complex teaching methodologies effectively",
-            "Frequent use of filler words and hesitations occasionally disrupts the natural flow of communication",
-            "Some grammatical patterns and sentence structures could be refined for smoother professional delivery"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:57:37.694Z"
-      }
-    },
-    {
-      "candidate_id": 14832,
-      "candidate_name": "MD ASHIF",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "MD ASHIF",
-          "overall_score": 57,
-          "pronunciation_score": 72,
-          "grammar_score": 58,
-          "vocabulary_score": 65,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 62,
-          "summary_points": [
-            "Demonstrates solid educational background and genuine passion for mathematics teaching with clear career progression from offline to online instruction",
-            "Shows good understanding of mathematical concepts and can explain teaching methodologies with adequate professional vocabulary",
-            "Communication is generally understandable despite frequent grammatical inconsistencies and sentence structure challenges",
-            "Speech flow is often interrupted by excessive filler words and incomplete thoughts that require listener patience",
-            "Would benefit from practicing smoother delivery and reducing hesitations to enhance professional presentation in client-facing roles"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:57:48.778Z"
-      }
-    },
-    {
-      "candidate_id": 14659,
-      "candidate_name": "name",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "name",
-          "overall_score": 50,
-          "pronunciation_score": 65,
-          "grammar_score": 40,
-          "vocabulary_score": 50,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 45,
-          "fluency_score": 45,
-          "summary_points": [
-            "Shows genuine enthusiasm for teaching mathematics and has relevant educational background in the subject area",
-            "Demonstrates understanding of key teaching concepts like using activities and engaging students actively",
-            "Speech flow is frequently interrupted with incomplete thoughts and fragmented sentence structures that impact clarity",
-            "Grammar patterns and word order often make responses difficult to follow, affecting professional communication",
-            "Would benefit from practicing complete sentence formation and organizing thoughts before speaking"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:58:01.357Z"
-      }
-    },
-    {
-      "candidate_id": 14557,
-      "candidate_name": "Naresh Chockalingam ",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Naresh Chockalingam ",
-          "overall_score": 61,
-          "pronunciation_score": 72,
-          "grammar_score": 68,
-          "vocabulary_score": 75,
-          "filler_words_score": 45,
-          "mother_tongue_influence_score": 65,
-          "fluency_score": 62,
-          "summary_points": [
-            "Demonstrates strong technical vocabulary and ability to explain complex mathematical concepts clearly, showing good subject matter expertise",
-            "Shows genuine understanding of teaching principles, emphasizing fundamentals over memorization and connecting concepts across disciplines",
-            "Communication is generally understandable with adequate grammar and pronunciation for professional interaction",
-            "Frequent use of filler words and hesitations significantly disrupts speech flow and affects overall communication effectiveness",
-            "Would benefit from practicing smoother delivery and reducing verbal pauses to enhance professional presentation"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:58:10.910Z"
-      }
-    },
-    {
-      "candidate_id": 14732,
-      "candidate_name": "Nikita N Kanbarkar",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Nikita N Kanbarkar",
-          "overall_score": 48,
-          "pronunciation_score": 55,
-          "grammar_score": 40,
-          "vocabulary_score": 50,
-          "filler_words_score": 60,
-          "mother_tongue_influence_score": 45,
-          "fluency_score": 45,
-          "summary_points": [
-            "Shows genuine enthusiasm for teaching and connecting with students from different backgrounds",
-            "Demonstrates understanding of key teaching concepts like using real-life examples and conducting assessments",
-            "Communication clarity needs significant improvement as many responses are difficult to follow and incomplete",
-            "Grammar and sentence structure require substantial development to effectively convey teaching concepts",
-            "Would benefit from practicing complete responses and organizing thoughts before speaking in professional settings"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:58:20.690Z"
-      }
-    },
-    {
-      "candidate_id": 14752,
-      "candidate_name": "Pradeep",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Pradeep",
-          "overall_score": 57,
-          "pronunciation_score": 72,
-          "grammar_score": 58,
-          "vocabulary_score": 65,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 62,
-          "summary_points": [
-            "Demonstrates solid mathematical expertise and genuine enthusiasm for teaching, with 11 years of relevant experience in both traditional and online education",
-            "Shows good understanding of pedagogical concepts like using real-world examples, interactive questioning, and adapting to different learning speeds",
-            "Communication is generally understandable with clear pronunciation, though frequent pauses and hesitations affect the flow of responses",
-            "Would benefit from practicing smoother delivery and reducing filler words to enhance professional presentation",
-            "Grammar patterns sometimes create awkward phrasing that requires listener attention, but meaning remains clear throughout"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:58:31.161Z"
-      }
-    },
-    {
-      "candidate_id": 14563,
-      "candidate_name": "Prajwal Chikkagalagali",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Prajwal Chikkagalagali",
-          "overall_score": 59,
-          "pronunciation_score": 72,
-          "grammar_score": 62,
-          "vocabulary_score": 65,
-          "filler_words_score": 45,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 58,
-          "summary_points": [
-            "Shows genuine passion for mathematics and teaching, with clear enthusiasm for helping students understand concepts",
-            "Demonstrates good foundational knowledge of teaching principles like using quizzes, assignments, and real-world applications",
-            "Communication is generally understandable despite frequent pauses and hesitations",
-            "Heavy use of filler words and incomplete sentences significantly impacts speech flow and professional presentation",
-            "Would benefit from practicing more structured responses and reducing verbal hesitations to improve overall clarity"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:58:52.402Z"
-      }
-    },
-    {
-      "candidate_id": 14572,
-      "candidate_name": "Pravalika Mashabattu",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Pravalika Mashabattu",
-          "overall_score": 56,
-          "pronunciation_score": 68,
-          "grammar_score": 52,
-          "vocabulary_score": 62,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 48,
-          "fluency_score": 58,
-          "summary_points": [
-            "Demonstrates genuine passion for mathematics teaching and shows strong subject knowledge with personal achievements",
-            "Communicates key ideas and teaching concepts clearly despite structural challenges",
-            "Shows good understanding of student engagement techniques and practical teaching methods",
-            "Sentence structure and grammar patterns sometimes create confusion and require listener effort to follow",
-            "Would benefit from practicing more organized responses and smoother speech flow for professional communication"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:59:08.348Z"
-      }
-    },
-    {
-      "candidate_id": 14718,
-      "candidate_name": "preeti Palni",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "preeti Palni",
-          "overall_score": 58,
-          "pronunciation_score": 75,
-          "grammar_score": 62,
-          "vocabulary_score": 70,
-          "filler_words_score": 65,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 68,
-          "summary_points": [
-            "Demonstrates strong subject matter expertise in mathematics teaching with clear passion for education and student-centered approaches",
-            "Shows good conceptual understanding when explaining teaching methods and can provide relevant real-world examples to make math engaging",
-            "Communication is generally understandable with adequate vocabulary for professional teaching contexts",
-            "Grammar patterns and sentence structure occasionally affect clarity and would benefit from refinement for smoother professional communication",
-            "Speech flow shows some hesitation and self-correction that could be improved through practice in structured interview settings"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:59:19.692Z"
-      }
-    },
-    {
-      "candidate_id": 14568,
-      "candidate_name": "priya Bajaj",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "priya Bajaj",
-          "overall_score": 57,
-          "pronunciation_score": 72,
-          "grammar_score": 62,
-          "vocabulary_score": 65,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 58,
-          "summary_points": [
-            "Demonstrates genuine passion for teaching and shows good understanding of mathematical concepts and pedagogical approaches",
-            "Generally intelligible pronunciation allows for effective communication in a professional setting",
-            "Shows ability to provide concrete examples and explain teaching methodologies clearly",
-            "Speech flow could benefit from more preparation and practice to reduce frequent restarts and incomplete thoughts",
-            "Grammar patterns and sentence structure occasionally impact clarity and would benefit from refinement"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:59:30.486Z"
-      }
-    },
-    {
-      "candidate_id": 14598,
-      "candidate_name": "priyanka Agrawal",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "priyanka Agrawal",
-          "overall_score": 59,
-          "pronunciation_score": 75,
-          "grammar_score": 68,
-          "vocabulary_score": 70,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 65,
-          "fluency_score": 62,
-          "summary_points": [
-            "Demonstrates genuine passion for mathematics education and shows strong understanding of teaching concepts through real-world applications",
-            "Communicates core ideas effectively with good professional vocabulary and clear pronunciation that supports understanding",
-            "Shows solid grasp of pedagogical approaches including interactive learning, assessment methods, and student engagement strategies",
-            "Speech flow could benefit from reducing filler words and pauses that occasionally interrupt the natural rhythm of responses",
-            "Sentence structure sometimes becomes complex or incomplete, though the intended meaning generally remains clear to listeners"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:59:41.171Z"
-      }
-    },
-    {
-      "candidate_id": 14662,
-      "candidate_name": "rajeev ranjan",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "rajeev ranjan",
-          "overall_score": 59,
-          "pronunciation_score": 72,
-          "grammar_score": 62,
-          "vocabulary_score": 65,
-          "filler_words_score": 45,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 58,
-          "summary_points": [
-            "Demonstrates solid teaching knowledge and genuine passion for education, with clear understanding of pedagogical concepts like using practical examples and student engagement",
-            "Shows good vocabulary range for educational topics and can explain complex concepts like integration and fractions in accessible ways",
-            "Communication is generally understandable despite frequent pauses and hesitations throughout responses",
-            "Heavy reliance on filler words and frequent speech interruptions significantly impact the flow and professional delivery",
-            "Would benefit from practicing smoother speech patterns and reducing hesitations to improve overall communication effectiveness"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T07:59:54.121Z"
-      }
-    },
-    {
-      "candidate_id": 14768,
-      "candidate_name": "Ramanpreet Kaur",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Ramanpreet Kaur",
-          "overall_score": 60,
-          "pronunciation_score": 72,
-          "grammar_score": 58,
-          "vocabulary_score": 65,
-          "filler_words_score": 45,
-          "mother_tongue_influence_score": 55,
-          "fluency_score": 62,
-          "summary_points": [
-            "Demonstrates genuine passion for mathematics education and shows clear understanding of teaching concepts like equivalent fractions and student assessment methods",
-            "Communicates core ideas effectively despite structural challenges, with good pronunciation that supports overall comprehension",
-            "Shows practical teaching experience through specific examples like helping students with trigonometry and adapting to different learning speeds",
-            "Heavy use of filler words and frequent self-corrections significantly impact speech flow and professional presentation",
-            "Sentence structure and grammar patterns need refinement to improve clarity and reduce listener effort in professional settings"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:00:04.770Z"
-      }
-    },
-    {
-      "candidate_id": 14677,
-      "candidate_name": "Reshu Jain",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Reshu Jain",
-          "overall_score": 56,
-          "pronunciation_score": 68,
-          "grammar_score": 52,
-          "vocabulary_score": 58,
-          "filler_words_score": 35,
-          "mother_tongue_influence_score": 55,
-          "fluency_score": 45,
-          "summary_points": [
-            "Demonstrates solid understanding of mathematical concepts and teaching principles, showing good subject matter knowledge",
-            "Shows awareness of different learning styles and the importance of student engagement through activities and real-life examples",
-            "Communication is significantly impacted by frequent hesitations, incomplete sentences, and excessive filler words that disrupt the flow of ideas",
-            "Would benefit from practicing structured responses and reducing verbal fillers to improve professional communication clarity"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:01:05.483Z"
-      }
-    },
-    {
-      "candidate_id": 14705,
-      "candidate_name": "sakshi bhardwaj",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "sakshi bhardwaj",
-          "overall_score": 57,
-          "pronunciation_score": 72,
-          "grammar_score": 62,
-          "vocabulary_score": 65,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 58,
-          "summary_points": [
-            "Demonstrates solid mathematical knowledge and genuine passion for teaching, with clear understanding of pedagogical concepts like real-life examples and student engagement",
-            "Shows good comprehension of questions and provides relevant responses about teaching methodologies and student assessment",
-            "Communication is generally understandable with adequate vocabulary for expressing educational concepts",
-            "Speech flow could benefit from more structured responses and reduced hesitation patterns",
-            "Grammar and sentence construction sometimes affect clarity, particularly in longer explanations"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:01:25.831Z"
-      }
-    },
-    {
-      "candidate_id": 14587,
-      "candidate_name": "seema",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "seema",
-          "overall_score": 57,
-          "pronunciation_score": 72,
-          "grammar_score": 58,
-          "vocabulary_score": 65,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 62,
-          "summary_points": [
-            "Demonstrates genuine passion for mathematics teaching with 10 years of experience and shows understanding of student-centered approaches",
-            "Communicates core ideas effectively and shows creativity in using games, activities, and real-world examples like pizza for fractions",
-            "Speech flow is often interrupted by frequent pauses, fillers, and self-corrections that affect overall fluency",
-            "Grammar patterns sometimes create confusion in meaning, particularly with sentence structure and word order",
-            "Would benefit from practicing smoother delivery and reducing hesitation markers to enhance professional communication"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:01:36.064Z"
-      }
-    },
-    {
-      "candidate_id": 14748,
-      "candidate_name": "Seema Kothari",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Seema Kothari",
-          "overall_score": 61,
-          "pronunciation_score": 75,
-          "grammar_score": 68,
-          "vocabulary_score": 70,
-          "filler_words_score": 45,
-          "mother_tongue_influence_score": 65,
-          "fluency_score": 62,
-          "summary_points": [
-            "Demonstrates strong subject matter expertise as a chartered accountant with extensive tutoring experience, showing genuine passion for teaching mathematics",
-            "Provides practical teaching examples and shows understanding of student-centered learning approaches, such as using pizza analogies for fractions",
-            "Speech is generally understandable with adequate vocabulary for professional communication in educational contexts",
-            "Frequent use of filler words and hesitations significantly disrupts the flow of communication and may impact student engagement",
-            "Sentence structure and organization could be improved to deliver clearer, more concise explanations in a teaching environment"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:01:47.924Z"
-      }
-    },
-    {
-      "candidate_id": 14542,
-      "candidate_name": "shaik Chameli",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "shaik Chameli",
-          "overall_score": 58,
-          "pronunciation_score": 72,
-          "grammar_score": 62,
-          "vocabulary_score": 68,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 58,
-          "summary_points": [
-            "Demonstrates strong subject knowledge in mathematics and shows genuine enthusiasm for teaching and professional development",
-            "Effectively uses real-world examples like pizza slices and cake baking to explain mathematical concepts, showing good pedagogical understanding",
-            "Shows clear commitment to student-centered learning with strategies for active engagement and differentiated instruction",
-            "Speech flow could be improved by reducing frequent pauses and filler words that sometimes interrupt the communication",
-            "Sentence structure and organization of ideas would benefit from more planning to enhance clarity in professional discussions"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:01:59.834Z"
-      }
-    },
-    {
-      "candidate_id": 14630,
-      "candidate_name": "Shalu Rajdev Popat",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Shalu Rajdev Popat",
-          "overall_score": 56,
-          "pronunciation_score": 65,
-          "grammar_score": 52,
-          "vocabulary_score": 58,
-          "filler_words_score": 35,
-          "mother_tongue_influence_score": 48,
-          "fluency_score": 45,
-          "summary_points": [
-            "Demonstrates genuine passion for mathematics education and shows understanding of core teaching concepts like interactive learning and real-world applications",
-            "Has extensive teaching experience across different levels and can explain mathematical concepts using practical examples like cake division for fractions",
-            "Speech flow is significantly disrupted by frequent incomplete sentences, long pauses, and difficulty organizing thoughts coherently",
-            "Heavy use of filler words and fragmented sentence structures makes following explanations challenging for listeners",
-            "Would benefit from practicing structured responses and reducing verbal hesitations to improve professional communication clarity"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:02:12.175Z"
-      }
-    },
-    {
-      "candidate_id": 14593,
-      "candidate_name": "Sheyama",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Sheyama",
-          "overall_score": 57,
-          "pronunciation_score": 72,
-          "grammar_score": 62,
-          "vocabulary_score": 55,
-          "filler_words_score": 45,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 58,
-          "summary_points": [
-            "Demonstrates genuine teaching experience and passion for education with clear understanding of student needs",
-            "Shows good pronunciation and is generally understandable to international listeners",
-            "Provides relevant examples like using pizza to teach fractions, showing practical teaching approach",
-            "Heavy reliance on filler words significantly disrupts communication flow and professional presentation",
-            "Would benefit from developing more complete responses and reducing hesitation patterns to improve overall clarity"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:02:22.196Z"
-      }
-    },
-    {
-      "candidate_id": 14545,
-      "candidate_name": "Suja Ayers",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Suja Ayers",
-          "overall_score": 59,
-          "pronunciation_score": 75,
-          "grammar_score": 72,
-          "vocabulary_score": 70,
-          "filler_words_score": 60,
-          "mother_tongue_influence_score": 70,
-          "fluency_score": 68,
-          "summary_points": [
-            "Demonstrates strong professional experience and genuine passion for teaching, with clear ability to communicate complex ideas effectively",
-            "Shows good vocabulary range and uses relevant examples to illustrate teaching concepts, making responses engaging and practical",
-            "Communication is generally clear and understandable with adequate grammar for professional interaction",
-            "Frequent use of filler words and occasional incomplete thoughts can interrupt the flow of communication",
-            "Would benefit from practicing more concise responses and reducing hesitation patterns to enhance overall fluency"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:02:32.477Z"
-      }
-    },
-    {
-      "candidate_id": 14680,
-      "candidate_name": "sumit dwivedi ",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "sumit dwivedi ",
-          "overall_score": 54,
-          "pronunciation_score": 72,
-          "grammar_score": 52,
-          "vocabulary_score": 60,
-          "filler_words_score": 65,
-          "mother_tongue_influence_score": 55,
-          "fluency_score": 58,
-          "summary_points": [
-            "Shows genuine enthusiasm for teaching and demonstrates understanding of student-centered learning approaches",
-            "Communicates core ideas effectively and provides relevant examples from teaching experience",
-            "Uses appropriate educational terminology and shows familiarity with interactive teaching methods",
-            "Grammar patterns and sentence structure sometimes affect clarity and professional flow",
-            "Would benefit from practicing smoother delivery and more complete sentence formation"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:02:43.425Z"
-      }
-    },
-    {
-      "candidate_id": 14604,
-      "candidate_name": "sunanda Vudata",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "sunanda Vudata",
-          "overall_score": 59,
-          "pronunciation_score": 72,
-          "grammar_score": 62,
-          "vocabulary_score": 60,
-          "filler_words_score": 45,
-          "mother_tongue_influence_score": 55,
-          "fluency_score": 58,
-          "summary_points": [
-            "Shows genuine enthusiasm for teaching and connecting with children, with clear passion for making math accessible through practical examples",
-            "Demonstrates good conceptual understanding of teaching methods, such as using real-world objects like pizza and candies to explain fractions",
-            "Speech is generally understandable with acceptable pronunciation for international communication",
-            "Frequent use of filler words and incomplete sentences significantly disrupts the flow of communication",
-            "Would benefit from practicing more structured responses and reducing hesitation patterns to improve professional presentation"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:02:55.524Z"
-      }
-    },
-    {
-      "candidate_id": 14574,
-      "candidate_name": "swetha chittoor",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "swetha chittoor",
-          "overall_score": 59,
-          "pronunciation_score": 72,
-          "grammar_score": 62,
-          "vocabulary_score": 65,
-          "filler_words_score": 45,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 58,
-          "summary_points": [
-            "Demonstrates genuine passion for teaching and strong understanding of student-centered learning approaches",
-            "Shows good conceptual knowledge of math education principles and real-world application methods",
-            "Communication is generally understandable with clear pronunciation for international audiences",
-            "Frequent use of filler words and incomplete sentence structures can disrupt the flow of explanations",
-            "Would benefit from practicing more structured responses to improve professional communication clarity"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:03:20.681Z"
-      }
-    },
-    {
-      "candidate_id": 14592,
-      "candidate_name": "venkata padmavathi g",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "venkata padmavathi g",
-          "overall_score": 57,
-          "pronunciation_score": 72,
-          "grammar_score": 62,
-          "vocabulary_score": 65,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 58,
-          "summary_points": [
-            "Shows genuine passion for teaching and demonstrates understanding of key educational concepts like student interaction and concept-based learning",
-            "Communicates core ideas effectively despite structural challenges, with clear pronunciation that supports comprehension",
-            "Has relevant professional experience in both software development and teaching across different age groups and subjects",
-            "Frequent use of filler words and incomplete sentence structures occasionally disrupts the flow of communication",
-            "Would benefit from practicing more structured responses and reducing hesitation patterns to enhance professional presentation"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:03:31.662Z"
-      }
-    },
-    {
-      "candidate_id": 14584,
-      "candidate_name": "Vignesh Narayanan",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Vignesh Narayanan",
-          "overall_score": 61,
-          "pronunciation_score": 78,
-          "grammar_score": 72,
-          "vocabulary_score": 75,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 70,
-          "fluency_score": 68,
-          "summary_points": [
-            "Demonstrates strong passion for teaching and connects well with personal experiences, showing genuine enthusiasm for education and student development",
-            "Shows good vocabulary range and ability to explain complex concepts using relatable examples like chocolates for multiplication tables",
-            "Communicates ideas clearly despite some structural awkwardness, with pronunciation that is generally easy to follow",
-            "Heavy use of filler words like 'um', 'uh', and 'and um' creates noticeable disruption to speech flow and professional presentation",
-            "Would benefit from practicing smoother transitions between ideas and reducing hesitation markers to enhance overall communication effectiveness"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:03:42.936Z"
-      }
-    },
-    {
-      "candidate_id": 14694,
-      "candidate_name": "VIGNESHWARAN R",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "VIGNESHWARAN R",
-          "overall_score": 57,
-          "pronunciation_score": 70,
-          "grammar_score": 58,
-          "vocabulary_score": 65,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 62,
-          "summary_points": [
-            "Demonstrates genuine passion for teaching mathematics and shows good understanding of educational concepts like interactive learning and real-world examples",
-            "Communicates core ideas effectively despite some structural challenges, with clear enthusiasm for student engagement",
-            "Shows practical teaching experience with ability to adapt methods for different learning speeds and backgrounds",
-            "Speech flow could benefit from better organization and reduced filler words to enhance professional delivery",
-            "Sentence structure and grammar patterns occasionally impact clarity, though meaning generally remains understandable"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:03:53.337Z"
-      }
-    },
-    {
-      "candidate_id": 14679,
-      "candidate_name": "Vishakha Gehlot",
-      "evaluation": {
-        "success": true,
-        "data": {
-          "name": "Vishakha Gehlot",
-          "overall_score": 57,
-          "pronunciation_score": 72,
-          "grammar_score": 58,
-          "vocabulary_score": 65,
-          "filler_words_score": 55,
-          "mother_tongue_influence_score": 60,
-          "fluency_score": 62,
-          "summary_points": [
-            "Demonstrates strong professional background and genuine enthusiasm for teaching mathematics with clear passion for student engagement",
-            "Shows good understanding of pedagogical concepts like connecting math to real-life scenarios and using interactive methods",
-            "Communication is generally understandable with adequate vocabulary for expressing teaching ideas and concepts",
-            "Speech flow could benefit from more structured responses and reduced use of filler words that sometimes interrupt the message",
-            "Grammar patterns occasionally create unclear sentences that may require listener effort to follow the intended meaning"
-          ]
-        },
-        "model": "claude",
-        "timestamp": "2026-02-07T08:04:11.337Z"
-      }
+  {
+    "candidate_id": 14693,
+    "candidate_name": "Ajay Kumar Sharma ",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Candidate",
+        "overall_score": 62,
+        "pronunciation_score": 75,
+        "grammar_score": 45,
+        "vocabulary_score": 60,
+        "filler_words_score": 55,
+        "mother_tongue_influence_score": 50,
+        "fluency_score": 65,
+        "detailed_comments": "The candidate demonstrates good subject matter knowledge and teaching passion, with clear pronunciation that makes them generally understandable. However, frequent grammatical errors, repetitive vocabulary, and noticeable mother tongue influence in sentence structure impact overall communication effectiveness. While they can express their ideas and maintain reasonable fluency, the language barriers may occasionally hinder clear professional communication in an international business environment."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:51:15.817Z"
     }
-  ]
+  },
+  {
+    "candidate_id": 14559,
+    "candidate_name": "AVANTIKA",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Candidate",
+        "overall_score": 52,
+        "pronunciation_score": 70,
+        "grammar_score": 35,
+        "vocabulary_score": 55,
+        "filler_words_score": 25,
+        "mother_tongue_influence_score": 40,
+        "fluency_score": 35,
+        "detailed_comments": "The candidate demonstrates passion for teaching and shows good conceptual understanding of math education principles. However, communication is significantly hindered by frequent filler words, incomplete sentences, and grammatical errors that impact clarity. While pronunciation is generally clear, the heavy use of 'uh' and fragmented sentence structures would challenge professional communication effectiveness. Improvement in fluency and reducing hesitations would greatly enhance overall communication impact."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:51:25.976Z"
+    }
+  },
+  {
+    "candidate_id": 14706,
+    "candidate_name": "CHARU GOYAL",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Charu Goyal",
+        "overall_score": 68,
+        "pronunciation_score": 75,
+        "grammar_score": 60,
+        "vocabulary_score": 72,
+        "filler_words_score": 45,
+        "mother_tongue_influence_score": 65,
+        "fluency_score": 58,
+        "detailed_comments": "Charu demonstrates strong subject matter expertise and teaching concepts with good vocabulary range and clear pronunciation. However, her fluency is significantly impacted by frequent filler words (uh, like, um) and hesitations that disrupt the natural flow of speech. Grammar issues include article usage, preposition errors, and incomplete sentences, though her ideas remain comprehensible. With practice to reduce fillers and improve sentence structure, she could communicate more confidently in professional settings."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:51:36.608Z"
+    }
+  },
+  {
+    "candidate_id": 14687,
+    "candidate_name": "Gayathri P",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Gayatri",
+        "overall_score": 42,
+        "pronunciation_score": 55,
+        "grammar_score": 35,
+        "vocabulary_score": 45,
+        "filler_words_score": 25,
+        "mother_tongue_influence_score": 30,
+        "fluency_score": 35,
+        "detailed_comments": "Gayatri demonstrates enthusiasm for teaching and shows understanding of mathematical concepts, but faces significant communication challenges. Her speech is heavily interrupted by fillers (um, uh, actually) and frequent pauses that disrupt fluency. Grammar issues include incomplete sentences, incorrect verb forms, and word order problems that sometimes impede comprehension. Strong mother tongue influence is evident in sentence structure and word choices. While her teaching ideas show potential, the communication barriers would significantly impact effectiveness in a professional online tutoring environment."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:51:47.411Z"
+    }
+  },
+  {
+    "candidate_id": 14547,
+    "candidate_name": "Harish HG",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Candidate",
+        "overall_score": 42,
+        "pronunciation_score": 65,
+        "grammar_score": 35,
+        "vocabulary_score": 45,
+        "filler_words_score": 20,
+        "mother_tongue_influence_score": 30,
+        "fluency_score": 25,
+        "detailed_comments": "The candidate demonstrates clear pronunciation and basic communication ability, but struggles significantly with fluency and excessive filler words (so, like, uh, um, I mean) that disrupt the flow of speech. Grammar issues include incomplete sentences, incorrect verb forms, and awkward constructions that sometimes impede understanding. While the candidate shows subject knowledge and enthusiasm for mathematics, the heavy reliance on fillers and frequent self-corrections indicate low confidence and would likely impact professional communication effectiveness. Significant improvement in fluency and reduction of filler words is needed for business readiness."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:51:58.036Z"
+    }
+  },
+  {
+    "candidate_id": 14712,
+    "candidate_name": "Heena Sagar Jain",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Jain",
+        "overall_score": 58,
+        "pronunciation_score": 75,
+        "grammar_score": 45,
+        "vocabulary_score": 55,
+        "filler_words_score": 35,
+        "mother_tongue_influence_score": 50,
+        "fluency_score": 52,
+        "detailed_comments": "Jain demonstrates clear pronunciation and genuine enthusiasm for teaching, making her generally understandable in professional communication. However, her fluency is significantly impacted by frequent filler words (um, uh, like), incomplete sentences, and hesitant delivery that affects confidence perception. Grammar issues include inconsistent verb tenses, article usage, and sentence structure, while vocabulary shows repetitive patterns and limited professional range. With focused practice on reducing fillers and improving sentence completion, she could enhance her communication effectiveness for business environments."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:52:10.316Z"
+    }
+  },
+  {
+    "candidate_id": 14617,
+    "candidate_name": "kajal bagdai",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Kajal Baghda",
+        "overall_score": 62,
+        "pronunciation_score": 75,
+        "grammar_score": 58,
+        "vocabulary_score": 68,
+        "filler_words_score": 35,
+        "mother_tongue_influence_score": 65,
+        "fluency_score": 45,
+        "detailed_comments": "Kajal demonstrates solid teaching knowledge and passion for mathematics education, with clear pronunciation that makes her easily understandable. However, her fluency is significantly impacted by excessive filler words (uh, um) and frequent hesitations that disrupt the natural flow of speech. While her vocabulary is appropriate for the teaching context and her grammar generally supports comprehension, the constant pauses and fillers would likely affect professional confidence in a business environment. With practice to reduce hesitations and improve speech flow, she could communicate much more effectively."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:52:20.643Z"
+    }
+  },
+  {
+    "candidate_id": 14597,
+    "candidate_name": "kokilapriya",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Candidate",
+        "overall_score": 42,
+        "pronunciation_score": 65,
+        "grammar_score": 35,
+        "vocabulary_score": 40,
+        "filler_words_score": 25,
+        "mother_tongue_influence_score": 30,
+        "fluency_score": 35,
+        "detailed_comments": "The candidate demonstrates basic communication ability and shows genuine enthusiasm for teaching mathematics. However, frequent filler words (um, uh), incomplete sentences, and significant grammar issues impact professional communication effectiveness. Vocabulary is limited with repetitive phrases, and strong mother tongue influence affects sentence structure. While the core teaching concepts are present, improved fluency and reduced hesitation would enhance professional readiness."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:52:31.937Z"
+    }
+  },
+  {
+    "candidate_id": 14555,
+    "candidate_name": "Kritika taneja",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Kritika Taneja",
+        "overall_score": 52,
+        "pronunciation_score": 68,
+        "grammar_score": 45,
+        "vocabulary_score": 55,
+        "filler_words_score": 25,
+        "mother_tongue_influence_score": 48,
+        "fluency_score": 35,
+        "detailed_comments": "Kritika demonstrates passion for teaching mathematics and her pronunciation is generally clear and understandable. However, her fluency is significantly impacted by excessive use of filler words (um, uh) and frequent pauses that disrupt the natural flow of communication. Grammar issues include incorrect verb forms, missing articles, and awkward sentence structures that sometimes affect clarity. While she shows adequate vocabulary for basic teaching concepts, her responses would benefit from more structured and confident delivery to be effective in a professional teaching environment."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:52:42.339Z"
+    }
+  },
+  {
+    "candidate_id": 14678,
+    "candidate_name": "Lakshay Dev Singh",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Lakshya",
+        "overall_score": 68,
+        "pronunciation_score": 75,
+        "grammar_score": 60,
+        "vocabulary_score": 70,
+        "filler_words_score": 65,
+        "mother_tongue_influence_score": 65,
+        "fluency_score": 70,
+        "detailed_comments": "Lakshya demonstrates good communication confidence and can effectively convey his teaching concepts and experiences. His pronunciation is generally clear and understandable for international listeners. However, his fluency is affected by frequent grammatical errors, awkward sentence structures, and occasional filler words like 'uh' and 'so'. His vocabulary range is adequate for professional communication, though he sometimes struggles with precise expression. With continued practice focusing on sentence structure and reducing hesitations, he could significantly improve his business communication effectiveness."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:52:53.278Z"
+    }
+  },
+  {
+    "candidate_id": 14666,
+    "candidate_name": "Mahalakshmi V",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Lakshmi",
+        "overall_score": 62,
+        "pronunciation_score": 75,
+        "grammar_score": 55,
+        "vocabulary_score": 65,
+        "filler_words_score": 45,
+        "mother_tongue_influence_score": 60,
+        "fluency_score": 50,
+        "detailed_comments": "Lakshmi demonstrates genuine passion for teaching and shows good conceptual understanding of educational methods. Her pronunciation is generally clear and understandable for international listeners. However, her fluency is significantly impacted by frequent pauses, restarts, and excessive use of filler words like 'uh', 'um', and 'like' throughout responses. Grammar issues include incomplete sentences, incorrect prepositions, and some structural problems that occasionally affect clarity. With practice to reduce hesitations and improve sentence flow, she could communicate more effectively in professional settings."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:53:05.626Z"
+    }
+  },
+  {
+    "candidate_id": 14676,
+    "candidate_name": "Mathi T",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Abhinaya",
+        "overall_score": 72,
+        "pronunciation_score": 85,
+        "grammar_score": 65,
+        "vocabulary_score": 75,
+        "filler_words_score": 55,
+        "mother_tongue_influence_score": 70,
+        "fluency_score": 68,
+        "detailed_comments": "Abhinaya demonstrates strong pronunciation and clear communication that would be easily understood in a professional environment. Her vocabulary is appropriate for teaching contexts and she effectively uses real-life examples to explain concepts. However, her fluency is impacted by frequent filler words (like, uh, so) and some grammatical inconsistencies including article usage and sentence structure. While her passion for teaching comes through clearly, reducing hesitations and fillers would significantly improve her professional communication confidence."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:53:17.150Z"
+    }
+  },
+  {
+    "candidate_id": 14832,
+    "candidate_name": "MD ASHIF",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Mohammed Asif",
+        "overall_score": 62,
+        "pronunciation_score": 75,
+        "grammar_score": 55,
+        "vocabulary_score": 65,
+        "filler_words_score": 45,
+        "mother_tongue_influence_score": 60,
+        "fluency_score": 58,
+        "detailed_comments": "Mohammed demonstrates good pronunciation and is generally understandable, with solid vocabulary for explaining mathematical concepts. However, his fluency is significantly impacted by frequent filler words (uh, like, basically) and hesitations that disrupt the natural flow of speech. Grammar issues include article usage, preposition errors, and sentence structure problems that occasionally affect clarity. While he shows teaching expertise and can communicate his ideas, reducing fillers and improving sentence construction would enhance his professional communication effectiveness."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:53:30.471Z"
+    }
+  },
+  {
+    "candidate_id": 14659,
+    "candidate_name": "name",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Lamitan",
+        "overall_score": 42,
+        "pronunciation_score": 65,
+        "grammar_score": 35,
+        "vocabulary_score": 45,
+        "filler_words_score": 25,
+        "mother_tongue_influence_score": 40,
+        "fluency_score": 30,
+        "detailed_comments": "Lamitan demonstrates basic communication ability but faces significant fluency challenges with frequent incomplete sentences, excessive filler words (um, uh), and fragmented thoughts that impact comprehension. While pronunciation is generally clear and educational background is evident, the candidate struggles to express complex ideas coherently and often leaves responses unfinished. Grammar issues and mother tongue influence further hinder professional communication effectiveness, requiring substantial improvement for business readiness."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:53:40.310Z"
+    }
+  },
+  {
+    "candidate_id": 14557,
+    "candidate_name": "Naresh Chockalingam ",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Naresh",
+        "overall_score": 72,
+        "pronunciation_score": 85,
+        "grammar_score": 65,
+        "vocabulary_score": 80,
+        "filler_words_score": 45,
+        "mother_tongue_influence_score": 70,
+        "fluency_score": 68,
+        "detailed_comments": "Naresh demonstrates strong technical vocabulary and clear pronunciation, making him easily understandable in a professional context. His responses show deep subject matter expertise and logical thinking. However, his fluency is significantly impacted by excessive use of filler words (uh, um, so) and frequent pauses, which affects his overall communication confidence. While his grammar has some structural issues typical of native language influence, his ideas are well-articulated and his passion for teaching mathematics comes through clearly."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:53:51.401Z"
+    }
+  },
+  {
+    "candidate_id": 14732,
+    "candidate_name": "Nikita N Kanbarkar",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Candidate",
+        "overall_score": 42,
+        "pronunciation_score": 55,
+        "grammar_score": 35,
+        "vocabulary_score": 45,
+        "filler_words_score": 40,
+        "mother_tongue_influence_score": 30,
+        "fluency_score": 25,
+        "detailed_comments": "The candidate demonstrates teaching passion and some relevant experience, but faces significant communication challenges that would impact professional effectiveness. Speech is frequently fragmented with incomplete sentences, making comprehension difficult for listeners. Strong mother tongue influence affects sentence structure and word order throughout responses. Grammar issues include incorrect verb tenses, missing articles, and unclear pronoun references that hinder understanding. While vocabulary shows some range, fluency is severely impacted by frequent pauses, restarts, and incomplete thoughts that would challenge student comprehension in a teaching environment."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:54:27.471Z"
+    }
+  },
+  {
+    "candidate_id": 14752,
+    "candidate_name": "Pradeep",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Pradeep",
+        "overall_score": 62,
+        "pronunciation_score": 75,
+        "grammar_score": 45,
+        "vocabulary_score": 65,
+        "filler_words_score": 35,
+        "mother_tongue_influence_score": 50,
+        "fluency_score": 55,
+        "detailed_comments": "Pradeep demonstrates good subject matter knowledge and teaching concepts, with clear pronunciation that makes him generally understandable. However, his fluency is significantly impacted by frequent filler words (uh, um) and hesitations throughout responses. Grammar issues include incorrect verb tenses, article usage, and sentence structure that sometimes affects clarity. His vocabulary is adequate for teaching contexts, though he tends to repeat phrases and could benefit from more varied expression to enhance professional communication effectiveness."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:54:38.494Z"
+    }
+  },
+  {
+    "candidate_id": 14563,
+    "candidate_name": "Prajwal Chikkagalagali",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Candidate",
+        "overall_score": 42,
+        "pronunciation_score": 65,
+        "grammar_score": 35,
+        "vocabulary_score": 45,
+        "filler_words_score": 25,
+        "mother_tongue_influence_score": 30,
+        "fluency_score": 35,
+        "detailed_comments": "The candidate demonstrates basic communication ability but faces significant challenges with fluency and excessive filler words that impede professional communication flow. Grammar issues including incorrect verb forms, article usage, and sentence structure create comprehension barriers. While pronunciation is generally clear and mathematical knowledge is evident, the heavy reliance on fillers like 'uh' and 'like' combined with incomplete thoughts significantly impacts overall effectiveness. Substantial improvement in fluency and reduction of hesitation markers would be needed for professional teaching communication."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:54:49.681Z"
+    }
+  },
+  {
+    "candidate_id": 14572,
+    "candidate_name": "Pravalika Mashabattu",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Prawika",
+        "overall_score": 42,
+        "pronunciation_score": 55,
+        "grammar_score": 25,
+        "vocabulary_score": 45,
+        "filler_words_score": 30,
+        "mother_tongue_influence_score": 35,
+        "fluency_score": 35,
+        "detailed_comments": "Prawika demonstrates genuine passion for mathematics and teaching, with clear subject knowledge and teaching experience. However, her communication is significantly hindered by frequent grammatical errors, incomplete sentences, and excessive use of fillers like 'uh', 'like', and repetitive phrases. Her responses often lack clear structure and contain numerous false starts and self-corrections that impact comprehension. While her enthusiasm is evident, substantial improvement in English fluency, sentence construction, and organized expression would be needed for effective professional communication in an international online teaching environment."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:55:01.332Z"
+    }
+  },
+  {
+    "candidate_id": 14718,
+    "candidate_name": "preeti Palni",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Preeti Palni",
+        "overall_score": 68,
+        "pronunciation_score": 75,
+        "grammar_score": 55,
+        "vocabulary_score": 70,
+        "filler_words_score": 60,
+        "mother_tongue_influence_score": 65,
+        "fluency_score": 70,
+        "detailed_comments": "Preeti demonstrates good subject matter expertise and communicates her teaching philosophy clearly with adequate fluency for professional settings. Her pronunciation is generally clear and understandable, though there are noticeable grammar issues including article usage, verb tense consistency, and sentence structure that occasionally impact clarity. She uses moderate filler words and shows some mother tongue influence in sentence construction, but her passion for teaching comes through effectively and she can express complex educational concepts reasonably well."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:55:14.312Z"
+    }
+  },
+  {
+    "candidate_id": 14568,
+    "candidate_name": "priya Bajaj",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Priya Bajaj",
+        "overall_score": 42,
+        "pronunciation_score": 65,
+        "grammar_score": 35,
+        "vocabulary_score": 45,
+        "filler_words_score": 25,
+        "mother_tongue_influence_score": 30,
+        "fluency_score": 20,
+        "detailed_comments": "Priya demonstrates genuine passion for teaching and shows subject knowledge, but faces significant fluency challenges with frequent false starts, self-corrections, and incomplete sentences that disrupt communication flow. Her pronunciation is generally clear, though heavy use of fillers like 'uh' and 'um' combined with grammatical errors and direct translations from her native language impact professional communication effectiveness. While her teaching concepts are sound, she would benefit from structured speaking practice to improve confidence and reduce hesitations before engaging in business communication roles."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:55:34.801Z"
+    }
+  },
+  {
+    "candidate_id": 14598,
+    "candidate_name": "priyanka Agrawal",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Priyanka Agrawal",
+        "overall_score": 62,
+        "pronunciation_score": 75,
+        "grammar_score": 55,
+        "vocabulary_score": 65,
+        "filler_words_score": 45,
+        "mother_tongue_influence_score": 60,
+        "fluency_score": 50,
+        "detailed_comments": "Priyanka demonstrates clear pronunciation and genuine passion for teaching mathematics, making her easily understandable throughout the interview. Her vocabulary is appropriate for educational contexts and she effectively uses real-world examples to explain concepts. However, her fluency is significantly impacted by frequent filler words (uh, you know, like), repetitive phrasing, and incomplete sentence structures that disrupt the natural flow of communication. While her grammar shows consistent patterns of mother tongue influence with article usage and sentence construction, her core message and teaching philosophy come through clearly, indicating functional professional communication ability with room for improvement in confidence and speech organization."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:55:46.295Z"
+    }
+  },
+  {
+    "candidate_id": 14662,
+    "candidate_name": "rajeev ranjan",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Candidate",
+        "overall_score": 58,
+        "pronunciation_score": 75,
+        "grammar_score": 45,
+        "vocabulary_score": 60,
+        "filler_words_score": 25,
+        "mother_tongue_influence_score": 50,
+        "fluency_score": 40,
+        "detailed_comments": "The candidate demonstrates good subject knowledge and teaching concepts but struggles significantly with fluency due to excessive filler words (uh, um, like) and frequent pauses that disrupt communication flow. While pronunciation is generally clear and vocabulary shows adequate range for teaching contexts, grammar issues with sentence structure and incomplete thoughts impact professional communication effectiveness. The candidate would benefit from practicing smoother delivery and reducing hesitation markers to improve overall business communication readiness."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:55:58.702Z"
+    }
+  },
+  {
+    "candidate_id": 14768,
+    "candidate_name": "Ramanpreet Kaur",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Candidate",
+        "overall_score": 62,
+        "pronunciation_score": 75,
+        "grammar_score": 55,
+        "vocabulary_score": 65,
+        "filler_words_score": 45,
+        "mother_tongue_influence_score": 60,
+        "fluency_score": 58,
+        "detailed_comments": "The candidate demonstrates good pronunciation and clarity, making their speech generally understandable for professional communication. However, fluency is significantly impacted by frequent filler words (um, uh, actually) and hesitations throughout responses. Grammar shows consistent issues with article usage, verb tenses, and sentence structure that sometimes affect clarity. Vocabulary is adequate for teaching contexts but could be more varied and precise. With focused practice on reducing fillers and improving sentence flow, communication effectiveness could improve substantially."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:56:10.143Z"
+    }
+  },
+  {
+    "candidate_id": 14677,
+    "candidate_name": "Reshu Jain",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Candidate",
+        "overall_score": 42,
+        "pronunciation_score": 65,
+        "grammar_score": 35,
+        "vocabulary_score": 45,
+        "filler_words_score": 25,
+        "mother_tongue_influence_score": 40,
+        "fluency_score": 30,
+        "detailed_comments": "The candidate demonstrates subject matter knowledge and teaching concepts but faces significant communication challenges. Speech is heavily fragmented with excessive filler words (uh, um) and frequent false starts that disrupt fluency. Grammar issues include incomplete sentences, incorrect verb forms, and awkward phrasing that sometimes obscures meaning. While pronunciation is generally clear and vocabulary shows professional awareness, the lack of fluency and coherent sentence structure would impact effectiveness in professional business communication requiring immediate improvement in speech organization and reduction of hesitations."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:56:21.147Z"
+    }
+  },
+  {
+    "candidate_id": 14705,
+    "candidate_name": "sakshi bhardwaj",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Sakshi Bhartwaj",
+        "overall_score": 58,
+        "pronunciation_score": 75,
+        "grammar_score": 45,
+        "vocabulary_score": 60,
+        "filler_words_score": 35,
+        "mother_tongue_influence_score": 40,
+        "fluency_score": 50,
+        "detailed_comments": "Sakshi demonstrates good pronunciation and is generally understandable, with solid subject matter knowledge in mathematics education. However, her fluency is significantly impacted by frequent filler words (uh, like, you know), incomplete sentences, and self-corrections that disrupt the flow of communication. Grammar issues include incorrect verb forms, missing articles, and sentence fragments, while strong mother tongue influence affects sentence structure and word choice. To improve professional communication readiness, she should focus on reducing fillers, completing thoughts before speaking, and practicing smoother sentence construction."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:56:32.981Z"
+    }
+  },
+  {
+    "candidate_id": 14587,
+    "candidate_name": "seema",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Candidate",
+        "overall_score": 58,
+        "pronunciation_score": 75,
+        "grammar_score": 45,
+        "vocabulary_score": 60,
+        "filler_words_score": 40,
+        "mother_tongue_influence_score": 50,
+        "fluency_score": 55,
+        "detailed_comments": "The candidate demonstrates clear pronunciation and genuine passion for mathematics teaching, making her generally understandable in a professional context. However, frequent grammatical errors, excessive filler words (um, uh), and incomplete sentence structures significantly impact fluency and professional communication effectiveness. Strong subject knowledge is evident, but language delivery needs improvement for confident business communication. With focused practice on reducing fillers and improving sentence construction, communication skills could advance considerably."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:56:46.140Z"
+    }
+  },
+  {
+    "candidate_id": 14748,
+    "candidate_name": "Seema Kothari",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Seema Kothari",
+        "overall_score": 62,
+        "pronunciation_score": 75,
+        "grammar_score": 55,
+        "vocabulary_score": 70,
+        "filler_words_score": 40,
+        "mother_tongue_influence_score": 60,
+        "fluency_score": 50,
+        "detailed_comments": "Seema demonstrates good subject matter knowledge and teaching experience, with clear pronunciation that makes her generally understandable. However, her fluency is significantly impacted by excessive filler words (uh, um, you know) and frequent pauses that disrupt the natural flow of speech. Her grammar shows inconsistencies in sentence structure and verb tenses, while her vocabulary is appropriate for the teaching context. To improve professional communication readiness, she should focus on reducing fillers and practicing smoother speech delivery."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:56:56.601Z"
+    }
+  },
+  {
+    "candidate_id": 14542,
+    "candidate_name": "shaik Chameli",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Sheikh Chamedi",
+        "overall_score": 58,
+        "pronunciation_score": 70,
+        "grammar_score": 45,
+        "vocabulary_score": 60,
+        "filler_words_score": 40,
+        "mother_tongue_influence_score": 50,
+        "fluency_score": 55,
+        "detailed_comments": "Sheikh demonstrates good subject knowledge and teaching passion with clear pronunciation that aids comprehension. However, frequent filler words (uh, like, means), incomplete sentences, and grammatical errors significantly impact fluency and professional communication effectiveness. Strong improvement needed in sentence structure, reducing hesitations, and organizing thoughts before speaking to meet business communication standards."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:57:05.647Z"
+    }
+  },
+  {
+    "candidate_id": 14630,
+    "candidate_name": "Shalu Rajdev Popat",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Kumar",
+        "overall_score": 42,
+        "pronunciation_score": 65,
+        "grammar_score": 35,
+        "vocabulary_score": 50,
+        "filler_words_score": 25,
+        "mother_tongue_influence_score": 40,
+        "fluency_score": 30,
+        "detailed_comments": "The candidate demonstrates subject matter knowledge and teaching experience but faces significant communication challenges. Speech is frequently fragmented with incomplete sentences, excessive fillers (like, uh, so), and unclear thought progression that would impact professional effectiveness. While pronunciation is generally understandable, the lack of fluency and coherent sentence structure creates comprehension difficulties. Grammar issues include incomplete sentences, incorrect verb forms, and awkward phrasing that stems from mother tongue influence. Vocabulary is adequate for basic communication but lacks professional polish and precision needed for effective online teaching."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:57:38.302Z"
+    }
+  },
+  {
+    "candidate_id": 14593,
+    "candidate_name": "Sheyama",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Subramanian",
+        "overall_score": 52,
+        "pronunciation_score": 75,
+        "grammar_score": 45,
+        "vocabulary_score": 50,
+        "filler_words_score": 25,
+        "mother_tongue_influence_score": 55,
+        "fluency_score": 35,
+        "detailed_comments": "Subramanian demonstrates clear pronunciation and basic communication ability, but struggles significantly with fluency due to excessive filler words and frequent pauses. While his ideas are generally understandable, the heavy use of 'um' and 'uh' throughout responses creates a hesitant delivery that impacts professional confidence. Grammar issues include incomplete sentences and word order problems, though they don't completely block comprehension. To improve business communication readiness, focus on reducing filler words, practicing smoother speech flow, and developing more complete sentence structures."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:57:48.548Z"
+    }
+  },
+  {
+    "candidate_id": 14545,
+    "candidate_name": "Suja Ayers",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Candidate",
+        "overall_score": 72,
+        "pronunciation_score": 80,
+        "grammar_score": 65,
+        "vocabulary_score": 75,
+        "filler_words_score": 55,
+        "mother_tongue_influence_score": 70,
+        "fluency_score": 70,
+        "detailed_comments": "The candidate demonstrates good communication effectiveness with clear pronunciation and appropriate professional vocabulary. She shows confidence in explaining teaching concepts and provides relevant examples from her experience. However, frequent use of filler words (um, uh, you know) and some incomplete sentences affect fluency. Grammar issues include article usage and sentence structure, but these don't significantly impede understanding. Overall, she communicates well enough for professional settings with room for improvement in reducing hesitations."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:57:58.486Z"
+    }
+  },
+  {
+    "candidate_id": 14680,
+    "candidate_name": "sumit dwivedi ",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Sumit Dvidi",
+        "overall_score": 52,
+        "pronunciation_score": 65,
+        "grammar_score": 35,
+        "vocabulary_score": 55,
+        "filler_words_score": 25,
+        "mother_tongue_influence_score": 40,
+        "fluency_score": 45,
+        "detailed_comments": "Sumit demonstrates genuine enthusiasm for teaching and shows good conceptual understanding of educational approaches. However, his communication is significantly hindered by frequent filler words, incomplete sentences, and grammatical errors that sometimes impact comprehension. His pronunciation is generally clear, but the heavy use of 'uh', 'um', and 'basically' disrupts fluency. Strong mother tongue influence is evident in sentence structure and word choices like 'max' for 'math' and awkward phrasings. While his teaching concepts are sound, he needs substantial improvement in English fluency and confidence for effective professional communication."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:58:09.731Z"
+    }
+  },
+  {
+    "candidate_id": 14604,
+    "candidate_name": "sunanda Vudata",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Sunanda",
+        "overall_score": 52,
+        "pronunciation_score": 65,
+        "grammar_score": 45,
+        "vocabulary_score": 50,
+        "filler_words_score": 35,
+        "mother_tongue_influence_score": 40,
+        "fluency_score": 40,
+        "detailed_comments": "Sunanda demonstrates genuine enthusiasm for teaching and shows good conceptual understanding of math education principles, particularly using real-world examples like pizza and candies to explain fractions. However, her communication is significantly impacted by excessive filler words (uh, um), frequent false starts, and incomplete sentences that disrupt the flow of ideas. Her pronunciation is generally clear, but grammar errors and mother tongue influence affect professional communication effectiveness. With practice to reduce hesitations and improve sentence structure, she could develop into an effective communicator."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:58:19.650Z"
+    }
+  },
+  {
+    "candidate_id": 14574,
+    "candidate_name": "swetha chittoor",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Shweta",
+        "overall_score": 58,
+        "pronunciation_score": 75,
+        "grammar_score": 45,
+        "vocabulary_score": 60,
+        "filler_words_score": 35,
+        "mother_tongue_influence_score": 50,
+        "fluency_score": 45,
+        "detailed_comments": "Shweta demonstrates good subject knowledge and teaching concepts, with clear pronunciation that makes her generally understandable. However, her fluency is significantly impacted by excessive filler words (um, uh, and all) and frequent pauses that disrupt the flow of communication. Grammar issues include incorrect verb forms, article usage, and sentence structure, though her ideas remain comprehensible. To improve professional readiness, she should focus on reducing fillers, practicing smoother speech delivery, and refining sentence construction while maintaining her enthusiasm for teaching."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:58:31.372Z"
+    }
+  },
+  {
+    "candidate_id": 14592,
+    "candidate_name": "venkata padmavathi g",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Candidate",
+        "overall_score": 52,
+        "pronunciation_score": 65,
+        "grammar_score": 35,
+        "vocabulary_score": 45,
+        "filler_words_score": 25,
+        "mother_tongue_influence_score": 30,
+        "fluency_score": 40,
+        "detailed_comments": "The candidate demonstrates genuine passion for teaching and can communicate basic ideas, but faces significant fluency challenges with frequent pauses, fillers, and incomplete sentences. Grammar issues include incorrect verb forms, missing articles, and awkward sentence structures that sometimes impede comprehension. Strong mother tongue influence is evident in word order and phrase construction. While pronunciation is generally clear, the excessive use of fillers and broken sentence patterns would impact professional communication effectiveness."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:58:41.082Z"
+    }
+  },
+  {
+    "candidate_id": 14584,
+    "candidate_name": "Vignesh Narayanan",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Vignesh Narayan",
+        "overall_score": 68,
+        "pronunciation_score": 78,
+        "grammar_score": 65,
+        "vocabulary_score": 72,
+        "filler_words_score": 45,
+        "mother_tongue_influence_score": 70,
+        "fluency_score": 62,
+        "detailed_comments": "Vignesh demonstrates good communication effectiveness with clear pronunciation and appropriate vocabulary for professional contexts. His passion for teaching comes through well, and he provides relevant examples from his experience. However, his fluency is significantly impacted by excessive filler words (um, uh, and) and frequent pauses that disrupt the natural flow of speech. While his grammar has some issues with sentence structure and article usage, these don't severely impact comprehension. To improve, he should focus on reducing filler words and practicing smoother delivery while maintaining his engaging storytelling approach."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:58:51.201Z"
+    }
+  },
+  {
+    "candidate_id": 14694,
+    "candidate_name": "VIGNESHWARAN R",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Vigneshwaran",
+        "overall_score": 62,
+        "pronunciation_score": 75,
+        "grammar_score": 45,
+        "vocabulary_score": 70,
+        "filler_words_score": 40,
+        "mother_tongue_influence_score": 50,
+        "fluency_score": 55,
+        "detailed_comments": "Vigneshwaran demonstrates good pronunciation and vocabulary range with clear passion for teaching mathematics. However, his fluency is significantly impacted by excessive filler words (uh, um, so, actually) and frequent self-corrections that disrupt the natural flow of speech. Grammar issues include inconsistent verb tenses, article usage, and sentence structure problems that occasionally affect clarity. While his ideas are generally understandable and he shows strong subject knowledge, reducing fillers and improving sentence construction would greatly enhance his professional communication effectiveness."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:59:28.723Z"
+    }
+  },
+  {
+    "candidate_id": 14679,
+    "candidate_name": "Vishakha Gehlot",
+    "evaluation": {
+      "success": true,
+      "data": {
+        "name": "Vishakha Dhalod",
+        "overall_score": 62,
+        "pronunciation_score": 75,
+        "grammar_score": 55,
+        "vocabulary_score": 65,
+        "filler_words_score": 45,
+        "mother_tongue_influence_score": 60,
+        "fluency_score": 58,
+        "detailed_comments": "Vishakha demonstrates good pronunciation and is generally understandable, with solid vocabulary for teaching contexts. However, her fluency is significantly impacted by excessive filler words (um, uh, you know) and frequent incomplete sentences. Grammar issues include subject-verb disagreements and awkward sentence structures that sometimes affect clarity. While she shows teaching knowledge and enthusiasm, reducing fillers and improving sentence completion would greatly enhance her professional communication effectiveness."
+      },
+      "model": "claude",
+      "timestamp": "2026-02-07T08:59:38.447Z"
+    }
+  }
+]
