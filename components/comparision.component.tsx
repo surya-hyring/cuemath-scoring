@@ -50,8 +50,8 @@ const CompareComponent = () => {
             <ComapreClaudeComponent />
           </CardContent>
         </Card>
+        
 
-        {/* Gemini */}
         <Card className="flex h-[85vh] flex-col">
           <CardHeader className="border-b">
             <CardTitle className="space-y-1">
